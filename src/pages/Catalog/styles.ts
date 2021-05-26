@@ -3,7 +3,7 @@ import { FlatList } from 'react-native'
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  padding: 30px;
+  padding: 0;
   background-color: #282a38;
 `
 export const ProductContainer = styled.View`
@@ -12,8 +12,10 @@ export const ProductContainer = styled.View`
   margin-top: 40px;
   border-radius: 5px;
 `
-export const ProductFlatList = styled(FlatList).attrs({
-  numColumns: 1,
+export const ProductFlatList = styled(FlatList).attrs(flat => {
+  {
+    flat.numColumns = 1
+  }
 })`
   flex: 1;
   padding: 40px 20px;
@@ -23,20 +25,20 @@ export const Product = styled.View`
   flex: 1;
   margin: 8px;
   background: #626878;
-  padding: 32px 12px;
+  padding: 15px 10px;
   border-radius: 25px;
 `
 
 export const ProductImage = styled.Image`
-  width: 90%;
+  width: 110%;
   height: 220px;
   align-self: center;
 `
-export const ProductText = styled.Text`
+export const ProductTitle = styled.Text`
   color: #b9c0d2;
   font-size: 22px;
   margin-top: 10px;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: 40px;
   letter-spacing: 3.5px;
 `
