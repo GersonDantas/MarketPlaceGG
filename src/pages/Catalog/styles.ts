@@ -3,13 +3,13 @@ import { FlatList } from 'react-native'
 
 export const Container = styled.SafeAreaView`
   flex: 1;
-  padding: 0;
+  padding-bottom: 100px;
   background-color: #282a38;
 `
 export const ProductContainer = styled.View`
   flex: 1;
   flex-direction: row;
-  margin-top: 40px;
+  margin-top: 60px;
   border-radius: 5px;
 `
 export const ProductFlatList = styled(FlatList).attrs(flat => {
@@ -23,7 +23,7 @@ export const ProductFlatList = styled(FlatList).attrs(flat => {
 
 export const Product = styled.View`
   flex: 1;
-  margin: 8px;
+  margin: 15px 8px;
   background: #626878;
   padding: 15px 10px;
   border-radius: 25px;

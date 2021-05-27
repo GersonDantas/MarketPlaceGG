@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { View } from "react-native"
 import FeatherIcon from "react-native-vector-icons/Feather"
 import formatValue from "../../utils/formatValue"
+import FloatingCart from "../../components/FloatingCart/index"
 
 import {
   Container,
@@ -31,6 +32,20 @@ const App: React.FC = ({ children }) => {
       image_url:
         "https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/quarterly_subscription_yjolpc.png",
       price: 150
+    },
+    {
+      id: "2",
+      title: "Assinatura trimestral",
+      image_url:
+        "https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/quarterly_subscription_yjolpc.png",
+      price: 150
+    },
+    {
+      id: "3",
+      title: "Assinatura trimestral",
+      image_url:
+        "https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/quarterly_subscription_yjolpc.png",
+      price: 150
     }
   ])
 
@@ -47,6 +62,8 @@ const App: React.FC = ({ children }) => {
       </PriceContainer>
     </Product>
   )
+
+
   return (
     <Container>
       <ProductContainer>
@@ -56,10 +73,11 @@ const App: React.FC = ({ children }) => {
           renderItem={renderItem}
           ListFooterComponent={<View />}
           ListFooterComponentStyle={{
-            height: 80
+            height: 70
           }}
         />
       </ProductContainer>
+      <FloatingCart />
     </Container>
   )
 }
