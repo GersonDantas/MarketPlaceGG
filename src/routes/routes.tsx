@@ -12,7 +12,7 @@ const Routes: React.FC = () => {
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
-        cardStyle: { backgroundColor: "#313746" }
+        cardStyle: { backgroundColor: "#313746" },
       }}
     >
       <Stack.Screen
@@ -21,13 +21,14 @@ const Routes: React.FC = () => {
         options={{
           headerShown: true,
           headerTransparent: true,
-          headerTitle: () => <Header />
+          headerTitle: () => <Header />,
         }}
       />
       <Stack.Screen
         name="Cart"
         component={Cart}
         options={{
+          headerShown: true,
           headerBackTitleVisible: false,
           headerTransparent: true,
           headerTitle: () => <Header />,

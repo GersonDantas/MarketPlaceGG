@@ -24,7 +24,7 @@ interface Products {
   price: number
 }
 
-const App: React.FC = ({ children }) => {
+const App: React.FC = () => {
   const [products, setProducts] = useState<Products[]>([
     {
       id: "1",
@@ -33,20 +33,6 @@ const App: React.FC = ({ children }) => {
         "https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/quarterly_subscription_yjolpc.png",
       price: 150
     },
-    {
-      id: "2",
-      title: "Assinatura trimestral",
-      image_url:
-        "https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/quarterly_subscription_yjolpc.png",
-      price: 150
-    },
-    {
-      id: "3",
-      title: "Assinatura trimestral",
-      image_url:
-        "https://res.cloudinary.com/robertosousa1/image/upload/v1594492578/dio/quarterly_subscription_yjolpc.png",
-      price: 150
-    }
   ])
 
   const renderItem = ({ item }) => (
